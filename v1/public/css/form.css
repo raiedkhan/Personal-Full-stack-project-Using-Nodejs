@@ -1,0 +1,65 @@
+
+
+
+#mainform{
+    color:white;
+    padding: 2vw;
+    width: 560px;
+    background-color: #2874A6 ;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.LogoAndQuotes
+{
+    color:white;
+    font-family:serif;
+    font-size: 15px;
+    margin-top: 40px;
+}
+.LogoAndQuotes .quotes p{
+    font-size:1.5vw;
+    font-weight: 300;
+}
+.LogoAndQuotes .quotes h5{
+    font-size:2vw;
+    font-weight: bold;
+}
+#add_quote{
+    font-size: 35px;
+    font-family: 'PT Serif', serif;
+    font-weight:bolder;
+    padding-bottom: 40px;
+}
+#mainform .form-group label 
+{
+    font-weight:700;
+    font-size: 15px;
+}
+#mainform .form-group textarea
+{
+    color: #154360   ;
+    font-family:serif;
+    font-weight:bold;
+}
+#mainform .form-group #title
+{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size:20px;
+}
+#mainform .input-box .btn
+{
+    background-color: white;
+    font-weight: bolder;
+    font-family: serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #17202A ;
+    transition: 0.5s;
+    border-radius: 0.5vw;
+}
+#mainform .input-box .btn:hover
+{
+    background-color:#9B59B6;
+    color: white;
+}

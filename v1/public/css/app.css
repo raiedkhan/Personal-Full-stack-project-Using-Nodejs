@@ -1,0 +1,263 @@
+*
+{
+	
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	font-family: 'Laila', serif;
+}
+#top ,#bottom{
+	background-color:#3498DB;
+	height:70px;
+} 
+#bottom
+{
+	box-shadow:0px 0px 10px #2874A6;
+}
+#top .navbar-brand img
+{
+	height: 50px;
+	width: 150px;
+}
+#top .navbar-brand
+{
+	color: white;
+	font-weight :bolder;
+	font-size:25px;
+}
+#top .navbar-nav li{
+	padding-right: 20px;
+}
+#top .nav-link,#bottom .nav-link
+{
+	color: white;
+	font-weight :bolder;
+	font-size:2.5vw;
+}
+#top a,#bottom a{
+	transition:0.5s;
+}
+#top a:hover
+{
+	background-color:#2E86C1;
+	color: white;
+	border-bottom-width: 3px;
+	border-color: transparent;
+	border-bottom-color: white;
+}
+#bottom a:hover
+{
+	box-shadow:0px 10px 10px #2874A6;
+	background: #2E86C1;
+	color:  white;
+}
+
+/*-------ADD CONTENT BUTTON STARTS-----*/
+
+.addcnt  {
+	position: fixed;
+	right: 2vw;
+	font-size: 15px;
+	outline: 0;
+	transition: 0.5s;
+	background: white;
+	color:#2E86C1;
+	box-shadow:1px 1px 10px #2874A6;	
+}
+.addcnt:hover
+{
+	box-shadow:0px 10px 10px #2874A6;
+	background: #2E86C1;
+	color:  white;
+}
+
+#topBtn {
+	position: fixed;
+	left: 20px;
+	bottom: 100px;
+	font-size: 1.5vw;
+	outline: 0;
+	transition: 0.5s;
+	background: white;
+	color:  #2E86C1;
+	box-shadow:1px 1px 10px #2874A6;	
+	cursor: pointer;	
+	display: none;
+}
+#topBtn:hover
+{
+	box-shadow:0px 10px 10px #2874A6;
+}
+
+/*-------ADD CONTENT BUTTON ENDS-----*/
+.header .heading span
+{
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-fill-color:#3498DB;
+	-webkit-text-stroke-color: #fff;
+}
+.header .heading
+{
+	margin-bottom: 3vw;
+}
+.header
+{
+	margin-top:-50px;
+    height: 45vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color:#fff;
+	display: flex;
+    align-items: center;
+	font-size: 1vw;
+	border-bottom: #ECF0F1;
+	box-shadow:0px 5px 10px #2874A6;
+}
+.header .card
+{
+	font-weight: bold;
+	font-size: 1.5vw;
+	color:black;
+	border: none;
+}
+.header .q_day
+{
+	font-size: 3vw;
+}
+.header .card .content .content-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.header .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-weight: bolder;
+	font-size: 1.5vw;
+	padding-top: 4vw;
+}
+
+.main .card .content .content-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.main .card 
+{
+	border-color:#CACFD2;
+	border-width: 1.5px;
+	font-weight: bold;
+	transition: 0.2s;
+}
+.main .card:hover
+{
+	box-shadow:12px 12px 20px #B3B6B7;
+}
+.main .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-weight: bolder;
+	padding-top: 4vw;
+}
+
+.main .card .card-footer .title
+{
+	font-size: 2vw;
+	color: white;
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+	font-weight: bolder;
+	background:#3498DB;
+	letter-spacing: 2px;
+}
+.main .card .card-body
+{
+	font-size:1.5vw;
+	font-family: sans-serif;
+	font-weight: normal;
+	letter-spacing: 0.1vw;
+}
+
+
+/*Universal CSS Ends */
+
+@media only screen and (min-width: 992px) 
+{
+	
+	.header .card{
+		display: block;
+	}
+	.main .content .content-overlay p{
+		font-size: 20px;
+	}
+	.main
+	{
+		padding: 50px;
+		margin-top:50px;
+		margin-bottom: 50px;
+	}
+	.main .card
+	{
+		margin-bottom: 50px;
+		box-shadow:5px 5px 10px #B3B6B7;
+	}
+}
+
+/*Desktop View Ends*/
+
+/*Mobile View Starts*/
+
+@media only screen and (max-width: 992px) 
+{
+
+
+	.main .content .content-overlay p{
+		margin-top: 25%;
+		font-size: 10px;
+	}
+	.main .card
+	{
+		margin-top:40px;
+	}
+	.main .card .card-body
+	{
+		font-size: 10px;
+	}
+	.header{
+		display: none;
+	}
+	.main{
+		
+		font-size: 30px;
+		
+	}
+}
+
+/*Mobile View Ends*/

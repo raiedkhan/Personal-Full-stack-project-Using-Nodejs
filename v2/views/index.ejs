@@ -1,0 +1,143 @@
+<% include partials/header %>
+
+<!--All Links starts-->
+<ul class="nav navbar fixed-bottom justify-content-center links" id="bottom">
+    <li class="nav-item">
+      <a class="nav-link " href="#">Love <i class="far fa-heart"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Sad <i class="far fa-sad-tear"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Motivated <i class="far fa-hand-peace"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="#">Random-Quote <i class="fas fa-random"></i></a>
+    </li>
+    <a class="btn" id="topBtn"><i class="fas fa-arrow-up"></i></a>
+    <a class="btn addcnt" href="/quotes/new">Add-Quote<i class="far fa-edit"></i></a>
+</ul>
+
+<!--All Links ends-->
+
+<!---Add content button starts-->
+
+
+
+<!--Landing page starts-->
+    <div class="header">
+        <div class="container">
+            <div class="row heading">
+                <div class="col-4"></div>
+                <div class="col-4"><span class="q_day">Quotes of the day</span></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row cards">
+                <% quotes.slice(-3).forEach(function(quote) { %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/mot4.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/sad3.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="card" >
+                                        <div class="content">
+                                            <div class="content-overlay">
+                                                <p>"<%=quote.body.substring(0,110)%>"</p>
+                                            </div>
+                                            <img src="/Images/love1.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                        </div>     
+                                </div>
+                            </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/rand.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>     
+                            </div>
+                        </div>
+                <% } %>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+<!--Landing page ends-->
+
+<!--main page starts-->
+
+<div class="container main">
+        <div class="card-columns">
+            <% quotes.forEach(function(quote) { %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
+                        <div class="card" >
+                            <div class="card-body">
+                                <p class="card-text">"<%=quote.body.substring(0,110)%>"</p>
+                            </div>
+                            <div class="card-footer" >
+                                <a><span class="title badge badge-secondary"><%=quote.title%></span></a>
+                            </div>
+                        </div>
+                <% } %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
+                        <div class="card" >
+                            <div class="card-body">
+                                <p class="card-text">"<%=quote.body.substring(0,110)%>"</p>
+                            </div>
+                            <div class="card-footer" >
+                                <span class="title badge badge-secondary"><%=quote.title%></span>
+                            </div>
+                        </div>
+                <% } %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
+                        <div class="card" >
+                            <div class="card-body">
+                                <p class="card-text">"<%=quote.body.substring(0,110)%>"</p>
+                            </div>
+                            <div class="card-footer" >
+                                <span class="title badge badge-secondary"><%=quote.title%></span>
+                            </div>
+                            
+                        </div>
+                <% } %>
+                <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
+                    <div class="card" >
+                        <div class="card-body">
+                            <p class="card-text">"<%=quote.body.substring(0,110)%>"</p>
+                        </div>
+                        <div class="card-footer" >
+                            <span class="title badge badge-secondary"><%=quote.title%></span>
+                        </div>
+                    </div>
+            <% } %>
+            <% }) %>
+        </div>
+    </div>
+
+<!--main page ends-->
+
+<% include partials/footer %>
