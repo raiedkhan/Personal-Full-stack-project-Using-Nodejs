@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+.container
+{
+    margin-top:5vw;
+}
+#mainform{
+    font-family: 'Kanit', sans-serif;
+    box-shadow:0px 0px 2vw #fff;
+    color:white;
+    padding: 2vw;
+    width: 560px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 25%);
+    border-radius: 10px;
+    margin-top: 40px;
+    
+}
+.LogoAndQuotes
+{
+    color:white;
+    font-family:serif;
+    font-size: 15px;
+    margin-top: 40px;
+}
+.LogoAndQuotes .quotes p{
+    font-family: 'Courgette', cursive;
+    font-size:1.5vw;
+    font-weight: 300;
+}
+.LogoAndQuotes .quotes h5{
+    font-size:2vw;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+}
+#mainform #add_quote{
+    font-size: 35px;
+    font-family: 'Kanit', sans-serif;
+    font-weight:bolder;
+    padding-bottom: 40px;
+}
+#mainform .form-group label 
+{
+    font-family: 'Kanit', sans-serif;
+    font-weight:700;
+    font-size: 15px;
+}
+#mainform .form-group textarea
+{
+    color: #154360  ;
+    font-family:serif;
+    font-weight:bold;
+    font-family: 'Courgette', cursive;
+}
+#mainform .form-group #title
+{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size:20px;
+}

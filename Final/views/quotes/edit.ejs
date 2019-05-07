@@ -1,0 +1,54 @@
+
+<head>    
+        <link rel="stylesheet" type="text/css" href="/css/form.css">
+</head>
+<% include ../partials/header %>
+<body>
+
+        <body class="bg-primary" >
+                <div class="container">
+                    <div class="row">
+                        <div class="LogoAndQuotes col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" id="LogoAndQuotes">
+                            
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12">
+                            <form class="mx-auto col-12" action="/quotes/<%=quote._id %>?_method=PUT" method="POST" id="mainform"">
+                                <center>
+                                    <h5 class="typewrite" data-period="2000" id="add_quote" data-type='[ "Edit Your Quote"]'>
+                                        <span class="wrap"></span>
+                                    </h5>
+                                </center>
+                                        <div class="form-group ">
+                                            <label for="inputState" id="title">Title</label>
+                                                <select id="inputTitle" name="quote[title]" class="form-control">
+                                                    <option value="Love">Love</option>
+                                                    <option value="Motivation">Motivation</option>
+                                                    <option value="Sad">Sad</option>
+                                                    <option value="Broken">Broken</option>
+                                                    <option value="Mixed Emotions">Mixed Emotions</option>                                                    
+                                                    <option value="RandomQuote">RandomQuote</option>
+                                                    <option selected value="<%= quote.title %>"><%= quote.title %></option>
+                                                </select>
+                                        </div>
+                                    <div class="form-group">
+                                        <label id="title" for="exampleFormControlTextarea1">Your Quote:</label>
+                                        <textarea class="form-control" name="quote[body]" id="exampleFormControlTextarea1" placeholder="Quote" rows="3" required="" onkeyup="count_up(this)" maxlength="150"><%= quote.body %></textarea>
+                                        <span class=" pull-right" id="count1">0</span>/150
+                                    </div>
+                                
+                                    <div class="input-box">
+                                        <button type="submit" class="btn btn-block  btn-outline-light ">Submit</button>
+                                    </div>
+                                </form>
+                            </form>
+                        </div>
+                        <div class="LogoAndQuotes col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" id="LogoAndQuotes">
+                            
+                        </div>
+                    </div>
+                </div>
+                <script src="/js/nav.js"></script>                
+                <% include ../partials/footer %>
+  
+</body>
+</html>

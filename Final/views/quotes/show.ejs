@@ -1,0 +1,97 @@
+
+
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="/css/show.css">
+</head>
+<% include ../partials/header %>
+
+
+<!-- Show Quote Starts -->
+
+    <div class="container quote">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8">
+                <div class="card" >
+                    <div class="content">
+                        <div class="content-overlay">
+                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                        </div>
+                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                    </div>
+                    <span class="title "><a  href="#"><%=quote.title%></a></span>
+                    <div class="writer">
+                        <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                        <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                        <% if(currentUser && quote.author.id.equals(currentUser._id)){ %>
+                            <div class="edit_delete">
+                                <a class="btn btn-xs edit btn-warning" href="/quotes/<%= quote._id %>/edit"><i class="far fa-edit"></i></a>
+                                <form id="delete-form" action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger"><i class="far fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        <% }%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+    </div>
+
+<!-- Show Quote Ends -->
+
+
+
+<!-- Show comment starts -->
+
+<div class="container comments">
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-10">
+            <h2 class="heading">Comments</h2>
+            <hr>
+            <% quote.comments.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-md-12 comment_data">
+                        <a class="comment_user" href="/users/<%=comment.author.id %>"><%=comment.author.firstname.charAt(0).toUpperCase()+comment.author.firstname.slice(1)+" "+comment.author.lastname%></a><span class="comment_text"> <%= comment.text %>  </span> 
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <form id="delete-form" action="/quotes/<%=quote._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-xs btn-danger del_comment" type="submit"><i class="far fa-trash-alt"></i></button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>        
+            <div class="comment">
+                <form action="/quotes/<%= quote._id %>/comments" method="POST">
+                    <div class="form-group">
+                        <textarea class="form-control theinput" type="text" name="comment[text]" placeholder="Enter the comment..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-success btn-block">Add Comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-1">
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Show comment ends -->
+
+
+</body>
+    
+    <% include ../partials/footer %>
+</html>

@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+.signup #Quotes p
+{
+    color:white;
+    font-family: 'Courgette', cursive;
+}
+
+.signup 
+{
+    margin-top:3vw;
+}
+.signup #logo{
+    margin-top: 5vw;
+}
+
+.signup ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: white;
+opacity: 0.6; /* Firefox */
+font-family: 'Acme', sans-serif;
+}
+
+.signup ::-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: white;
+font-family: 'Acme', sans-serif;
+}
+
+.signup ::-ms-input-placeholder { /* Microsoft Edge */
+color: white;
+font-family: 'Acme', sans-serif;
+}
+
+.signup #signup_heading{
+    margin-top:20px;
+    font-family: 'Acme', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.signup .theinput{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    width: 177px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    color: white;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.signup .theinput:focus{
+    width: 300px;
+    border-bottom: 2px solid white;
+}
+
+.signup .content{
+    padding-bottom: 75px;
+}
+
+.signup form{
+    
+    border-width: 2px;
+    color:white;
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-top: 0.1px;
+}
+.signup form #about_length , #first_length, #last_length{
+    margin-right: -45px;
+    font-weight: bold;
+}
+.signup button{
+    font-family: 'Acme', sans-serif;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 215, 0, 0);
+    border-color: white;
+    border-width: 1px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 50px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+.signup button:hover{
+    background-color: white;
+    color: black;
+    border-color: white;
+    border-width: 1px;
+    cursor: pointer;
+
+}
+
+.signup button:focus{
+    outline: 0;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.signup #termsandcon
+{
+    margin-top:-30px;
+    margin-bottom:20px;
+    color: white;
+}
+.signup #termsandcon .form-check-input
+{
+    margin-top:8px;
+    border-color:red;
+}
+.signup #termsandcon #termstext a
+{
+    font-weight: bolder;
+    color:white;
+}
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+
+    .signup #logo{
+        margin-left:20px;
+        margin-top: 100px;
+    }
+    .signup #login_heading{
+        margin-top:0px;
+    }
+    
+    .signup form{
+    margin-top: 0px;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    padding-top: 0px;
+    }
+  
+  }
+  
+  /*Css for Mobile View Portrait Ends*/
+
+/*Css for Mobile View Landscape Starts*/
+
+@media only screen and (max-width: 992px) {
+    
+
+
+}
+  
+  /*Css for Mobile View Landscape Ends*/

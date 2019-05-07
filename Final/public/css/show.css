@@ -1,0 +1,207 @@
+.quote{
+    margin-top:125px;
+    
+}
+
+.quote .card .content .content-overlay {
+	position: absolute;
+	height:29vw;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0.7);
+}
+.quote .card .content img
+{
+  height:29vw;
+}
+.quote .card .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-size:3vw;
+  padding-top: 5vw;
+  font-family: 'Courgette', cursive;
+}
+
+.quote .card .title  {
+  font-family: 'Acme', sans-serif;
+	top:5px;
+	left:5px;
+	color: white;
+	position: absolute;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.quote .card .title  a{
+    font-size:2vw;
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.quote .card .writer  {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:10px;
+    font-size:2.5vw;
+    font-weight: bolder;
+}
+.quote .card .writer .writer-image
+{
+  font-family: 'Bree Serif', serif;
+  transition: all 0.8s ease;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    letter-spacing: 1.5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+.quote .card .writer .writer-image:hover
+{
+  background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+
+.quote .card
+{
+  border-color:#D0D3D4;
+  transition: 0.2s;
+  margin-bottom: 5vw;
+  
+}
+.quote .card .writer .writer-name a
+{
+  text-decoration: none;
+  color:black;
+}
+
+.quote .card:hover
+{
+	box-shadow:8px 10px 10px #B3B6B7;
+}
+
+.quote .card .writer .edit_delete
+{
+position: absolute;
+bottom:10px;
+right:10px;
+}
+.quote .card .writer .edit
+{
+  font-family: 'Acme', sans-serif;
+	color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.quote .card .writer #delete-form
+{
+  display: inline;	
+	color: white;
+}
+
+.comments .heading
+{
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color:#777;
+}
+.comments .comment .theinput
+{
+  margin-top:100px;
+  height:100px;
+  font-size: 20px;
+  width: 100%;
+	border: none;
+  border: 2px solid #777;
+  border-radius: 5px;
+  outline: none;
+  color: #777;
+  letter-spacing: 1px;
+  font-weight: 500;
+  
+}
+.comments .comment .theinput:focus {
+  color: black;
+  border: 2px solid #007bff;
+}
+
+
+.comments .comment .btn
+{
+  margin-bottom: 50px;
+  font-weight: bolder;
+  font-size:25px;
+  letter-spacing: 2px;
+}
+.comments .container-fluid
+{
+  border: 2px solid #777;
+  padding: 5px;
+}
+.comment_data #delete-form
+{
+  right:10px;
+  bottom:-7px;
+  position: absolute;
+}
+.comment_data
+{
+  margin-bottom:10px;
+  background: #ECF0F1;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.comment_data .comment_user
+{
+  font-size:20px;
+  text-decoration: none;
+  color: black;
+  font-weight:bolder;
+}
+
+.comment_data .comment_text
+{
+  
+  
+  color: black;
+}
+/* comment css ends */
+
+
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+
+  .quote .card .content img
+  {
+    height:60vw;
+  }
+  .quote .card .content .content-overlay 
+  {
+    height: 60vw;
+  }
+  .quote .card .content .content-overlay p{
+    padding-top: 15vw;
+    font-size: 5vw;
+  }
+  .quote .card .title a  {
+    font-size: 5vw;
+  }
+  .quote .card .writer  {
+    font-size:5vw;
+  }
+
+}
+
