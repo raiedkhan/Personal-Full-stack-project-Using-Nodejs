@@ -282,7 +282,6 @@ background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
 
 .main{
   background: #ECF0F1 ;
-  height: 100vw;
 }
 
 .main .card-columns
@@ -466,6 +465,10 @@ background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
   .main .card-columns .card .content img
   {
     height:60vw;
+  }
+  .header .card-columns
+  {
+    display: none;
   }
   .navbar-nav li
   {

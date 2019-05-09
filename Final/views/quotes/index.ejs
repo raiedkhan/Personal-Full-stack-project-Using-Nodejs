@@ -19,7 +19,7 @@
             </div>
         </div>
             <div class="card-columns">
-                    <% quotes.slice(-3).forEach(function(quote) { %>
+                    <% quotes.slice(-3).reverse().forEach(function(quote) { %>
                         <div class="card" >
                             <div class="content">
                                 <div class="content-overlay">
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="card-columns">
-            <% quotes.forEach(function(quote) { %>
+            <% quotes.reverse().forEach(function(quote) { %>
                 <div class="card" >
                     <div class="content">
                         <div class="content-overlay">

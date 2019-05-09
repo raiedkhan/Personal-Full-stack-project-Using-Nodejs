@@ -13,7 +13,9 @@
     margin-top:3vw;
 }
 .signup #logo{
-    margin-top: 5vw;
+        margin-top: 5vw;
+        font-size:100px;
+        color:white;
 }
 
 .signup ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

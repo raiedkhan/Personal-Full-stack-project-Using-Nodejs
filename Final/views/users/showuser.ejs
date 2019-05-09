@@ -51,59 +51,26 @@
 <!-- User contents start -->
 
     <div class="container user-profile-quote"  >
-            <div class="card-columns">
-                    <% quotes.forEach(function(quote) { %>
-                        <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
-                            <div class="card" >
-                                <div class="content">
-                                    <div class="content-overlay">
-                                        <p>"<%=quote.body.substring(0,110)%>"</p>
-                                    </div>
-                                    <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
-                                </div>
-                                <span class="title "><a  href="#"><%=quote.title%></a></span>
-                                <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
-                            </div>
-                        <% } %>
-                        <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
-                            <div class="card" >
-                                    <div class="content">
-                                        <div class="content-overlay">
-                                            <p>"<%=quote.body.substring(0,110)%>"</p>
-                                        </div>
-                                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
-                                    </div>
-                                    <span class="title "><a  href="#"><%=quote.title%></a></span>
-                                    <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
-                            </div>
-                        <% } %>
-                        <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
-                            <div class="card" >
-                                    <div class="content">
-                                        <div class="content-overlay">
-                                            <p>"<%=quote.body.substring(0,110)%>"</p>
-                                        </div>
-                                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
-                                    </div>
-                                    <span class="title "><a  href="#"><%=quote.title%></a></span>
-                                    <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
-                                </div>
-                        <% } %>
-                        <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
-                            <div class="card" >
-                                    <div class="content">
-                                        <div class="content-overlay">
-                                            <p>"<%=quote.body.substring(0,110)%>"</p>
-                                        </div>
-                                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
-                                    </div>
-                                    <span class="title "><a  href="#"><%=quote.title%></a></span>
-                                    <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
-                                </div>
-                        <% } %>
-                    <% }) %>
+        <div class="card-columns">
+            <% quotes.reverse().forEach(function(quote) { %>
+                <div class="card" >
+                    <div class="content">
+                        <div class="content-overlay">
+                            <p>
+                                "<%=quote.body.substring(0,110)%>
+                                <% if(quote.body.length>110) { %>
+                                    <a href="/quotes/<%= quote._id %> ">...</a>
+                                <% } %>"
+                            </p>
+                        </div>
+                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                    </div>
+                    <span class="title "><p><%=quote.title%></p></span>
+                    <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
                 </div>
+            <% }) %>
         </div>
+    </div>
 
 
 

@@ -76,9 +76,9 @@ router.get("/new", middleware.isLoggedIn,function(req,res){
 //Create Quote
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) 
 {
-    cloudinary.uploader.upload(req.file.path, function(result) // add cloudinary url for the image to the campground object under image property
+    cloudinary.uploader.upload(req.file.path, function(result) // add cloudinary url for the image to the quote object under image property
     { 
-        req.body.quote.image = result.secure_url;// add author to campground
+        req.body.quote.image = result.secure_url;// add author to quote
         req.body.quote.imageId = result.public_id;
         req.body.quote.author = {
           id: req.user._id,
@@ -104,7 +104,6 @@ router.get("/:id", function(req, res){
         if(err){
             console.log(err);
         } else {
-            //render show template with that campground
             res.render("quotes/show", {quote: foundQuote});
         }
     });

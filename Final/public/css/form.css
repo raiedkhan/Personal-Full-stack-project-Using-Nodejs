@@ -23,6 +23,11 @@
     font-size: 15px;
     margin-top: 40px;
 }
+.LogoAndQuotes #logo
+{
+    font-size:100px;
+    color:white;
+}
 .LogoAndQuotes .quotes p{
     font-family: 'Courgette', cursive;
     font-size:1.5vw;
@@ -57,4 +62,12 @@
     font-family: sans-serif;
     font-weight: 900;
     font-size:20px;
+}
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+    .LogoAndQuotes #logo
+    {
+        margin-top:60px;
+    }
 }

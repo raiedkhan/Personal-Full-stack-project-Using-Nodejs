@@ -110,6 +110,125 @@ right:10px;
 	color: white;
 }
 
+
+.quote_main .card-columns
+{
+  margin-top:5vw;
+  margin-right: 15px;
+	border: none;
+}
+
+
+.quote_main .card-columns .card .content .content-overlay {
+	position: absolute;
+	height:19.4vw;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0.7);
+}
+.quote_main .card-columns .card .content img
+{
+  height:19.4vw;
+}
+.quote_main .card-columns .card .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-size: 1.5vw;
+  padding-top: 4vw;
+  font-family: 'Courgette', cursive;
+}
+
+.quote_main .card-columns .card .title  {
+  font-family: 'Acme', sans-serif;
+	top:5px;
+	left:5px;
+	color: white;
+	position: absolute;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.quote_main .card-columns .card .title  a{
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.quote_main .card-columns .card .writer  {
+	bottom:12px;
+	left:5px;
+	font-family: 'Kanit', sans-serif;
+	position: absolute;
+  font-weight: bolder;
+}
+.quote_main .card-columns .card .writer .writer-image
+{
+  font-family: 'Bree Serif', serif;
+  transition: all 0.8s ease;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+	letter-spacing: 1.5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+.quote_main .card-columns .card .writer .writer-image:hover
+{
+  background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+.quote_main .card .writer .edit_delete
+{
+position: absolute;
+bottom:10px;
+right:10px;
+}
+.quote_main .card .writer .edit
+{
+  font-family: 'Acme', sans-serif;
+	color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.quote_main .card .writer #delete-form
+{
+  display: inline;	
+	color: white;
+}
+.quote_main .card-columns
+{
+  margin-left:3vw;
+  margin-right: 3vw;
+}
+.quote_main .card-columns .card
+{
+  border-color:#D0D3D4;
+  transition: 0.2s;
+  margin-bottom: 5vw;
+  display: none;
+}
+.quote_main .card-columns .card .writer .writer-name a
+{
+  text-decoration: none;
+  color:black;
+}
+
+.quote_main .card-columns .card:hover
+{
+	box-shadow:8px 10px 10px #B3B6B7;
+}
+
+
 .comments .heading
 {
   font-weight: bolder;
@@ -118,7 +237,7 @@ right:10px;
 }
 .comments .comment .theinput
 {
-  margin-top:100px;
+  margin-top:10px;
   height:100px;
   font-size: 20px;
   width: 100%;
@@ -173,8 +292,6 @@ right:10px;
 
 .comment_data .comment_text
 {
-  
-  
   color: black;
 }
 /* comment css ends */
@@ -202,6 +319,45 @@ right:10px;
   .quote .card .writer  {
     font-size:5vw;
   }
-
+  .quote .card{
+    display: none;
+  }
+  .quote_main .card-columns .card
+  {
+    height:75vw;
+    display: block;
+  }
+  .quote_main .card-columns .card .content .content-overlay p
+  {
+    padding-top: 10vw;
+    font-size: 5vw;
+  }
+  .quote_main .card-columns .card .title {
+    font-size: 5vw;
+  }
+  .quote_main .card-columns .card .writer {
+    font-size: 5vw;
+  }
+  .quote_main .card-columns .card .content .content-overlay
+  {
+    height:60vw;
+  }
+  .quote_main .card-columns .card .content img
+  {
+    height:60vw;
+  }
+  .quote_main .card .writer .edit_delete
+  {
+    top:1px;
+    right:-42vw;
+  }
+  .quote_main .card .writer .edit_delete .btn
+  {
+    font-size:4vw;
+  }
+  .comments .comment .theinput
+  {
+    margin-top:10px;
+  }
 }
 

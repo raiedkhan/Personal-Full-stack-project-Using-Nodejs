@@ -31,7 +31,6 @@ div.hr {
 }
 .user-profile .user-data #user-data-img
 {
-  
   margin-left:10px;
   margin-bottom: 30px;
   font-size:5vw;
@@ -210,9 +209,9 @@ div.hr {
   {
     height:75vw;
   }
-  .user-profile-quote .card-columns
+  .user-profile-quote 
   {
-    margin-right: 6vw;
+    margin-top:10px;
   }
   .user-profile-quote .card-columns .card .content .content-overlay p
   {
@@ -222,7 +221,10 @@ div.hr {
   .user-profile-quote .card-columns .card .title {
     font-size: 5vw;
   }
-
+  .user-profile-quote .card .show_more
+  {
+    font-size: 5vw;
+  }
 
 }
 

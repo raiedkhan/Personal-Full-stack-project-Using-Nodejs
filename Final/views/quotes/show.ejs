@@ -18,7 +18,7 @@
                 <div class="card" >
                     <div class="content">
                         <div class="content-overlay">
-                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                            <p>"<%=quote.body%>"</p>
                         </div>
                         <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
                     </div>
@@ -45,7 +45,35 @@
 
 <!-- Show Quote Ends -->
 
-
+<!-- Show Quote mobile version -->
+<div class="container-fluid quote_main">
+    <div class="card-columns">
+                <div class="card" >
+                    <div class="content">
+                        <div class="content-overlay">
+                            <p>
+                                "<%=quote.body%>"
+                            </p>
+                        </div>
+                        <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                    </div>
+                    <span class="title "><p><%=quote.title%></p></span>
+                    <div class="writer">
+                        <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                        <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                        <% if(currentUser && quote.author.id.equals(currentUser._id)){ %>
+                            <div class="edit_delete">
+                                <a class="btn btn-xs edit btn-warning" href="/quotes/<%= quote._id %>/edit"><i class="far fa-edit"></i></a>
+                                <form id="delete-form" action="/quotes/<%= quote._id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger"><i class="far fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        <% }%>
+                    </div>
+                </div>
+        </div>
+</div>
+<!-- Ends -->
 
 <!-- Show comment starts -->
 
