@@ -1,0 +1,167 @@
+<% include ../partials/header %>
+
+<!--Go to top starts-->
+
+<a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
+<a href="/quotes/new" id="add-quote2" class="btn-primary" ><i class="fas fa-pen-fancy"></i></a>
+
+<!--Go to top ends-->
+<!--Header Starts-->
+
+
+
+<div class="container-fluid header bg-primary" id="header-particles-js">
+    <div class="row heading">
+        <div class="col-12 ">
+          <span class="q_day">
+            <p class="typewrite" data-period="2000" data-type='[ "Welcome  to  Random  Quotes","Start writing , no matter what"]'>
+              <span class="wrap"></span>
+            </p>
+          </span>
+      </div>
+    </div>
+    <div class="row cards">
+            <% quotes.slice(-3).forEach(function(quote) { %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card" >
+                                <div class="content">
+                                    <div class="content-overlay">
+                                        <p>"<%=quote.body.substring(0,110)%>"</p>
+                                    </div>
+                                    <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                                </div>
+                                <span class="writer ">~ Submitted By <i class="fas fa-pen-fancy"></i> <a href="/users/<%=quote.author.id %>"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                        </div>
+                    </div>
+                <% } %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card" >
+                                <div class="content">
+                                    <div class="content-overlay">
+                                        <p>"<%=quote.body.substring(0,110)%>"</p>
+                                    </div>
+                                    <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                                </div>
+                                <span class="writer ">~ Submitted By <i class="fas fa-pen-fancy"></i> <a href="/users/<%=quote.author.id %>"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                        </div>
+                    </div>
+                <% } %>
+                <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card" >
+                                <div class="content">
+                                    <div class="content-overlay">
+                                        <p>"<%=quote.body.substring(0,110)%>"</p>
+                                    </div>
+                                    <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                                </div>
+                            <span class="writer ">~ Submitted By <i class="fas fa-pen-fancy"></i> <a href="/users/<%=quote.author.id %>"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                        </div>
+                    </div>
+                <% } %>
+                <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card" >
+                                <div class="content">
+                                    <div class="content-overlay">
+                                        <p>"<%=quote.body.substring(0,110)%>"</p>
+                                    </div>
+                                    <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                                </div>
+                                <span class="writer ">~ Submitted By <i class="fas fa-pen-fancy"></i> <a href="/users/<%=quote.author.id %>"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                        </div>
+                    </div>
+                <% } %>
+            <% }) %>
+    </div>
+</div>
+
+
+
+<!--Header Ends-->
+
+
+
+<!--Body Starts-->
+   
+    <div class="container-fluid main" id="main-particles-js">
+        <div class="card-columns">
+                <% quotes.forEach(function(quote) { %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
+                        <div class="card" >
+                            <div class="content">
+                                <div class="content-overlay">
+                                    <p>"<%=quote.body.substring(0,110)%>"</p>
+                                </div>
+                                <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                            </div>
+                            <span class="title "><a  href="#"><%=quote.title%></a></span>
+                            <div class="writer">
+                                    <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                                    <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                                </div>
+                            <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
+                        <div class="card" >
+                            <div class="content">
+                                <div class="content-overlay">
+                                    <p>"<%=quote.body.substring(0,110)%>"</p>
+                                </div>
+                                <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                            </div>
+                            <span class="title "><a  href="#"><%=quote.title%></a></span>
+                            <div class="writer">
+                                <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                                <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                                <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
+                        <div class="card" >
+                            <div class="content">
+                                <div class="content-overlay">
+                                    <p>"<%=quote.body.substring(0,110)%>"</p>
+                                </div>
+                                <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                            </div>
+                            <span class="title "><a  href="#"><%=quote.title%></a></span>
+                            <div class="writer">
+                                    <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                                    <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                            </div>
+                            <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
+                        <div class="card" >
+                            <div class="content">
+                                <div class="content-overlay">
+                                    <p>"<%=quote.body.substring(0,110)%>"</p>
+                                </div>
+                                <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                            </div>
+                            <span class="title "><a  href="#"><%=quote.title%></a></span>
+                            <div class="writer">
+                                    <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                                    <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                            </div>
+                            <a href="/quotes/<%= quote._id %>" class="show_more ">Show more</a>
+                        </div>
+                    <% } %>
+                <% }) %>
+            </div>
+    </div>
+  
+      
+  
+  
+<!--Body Ends-->
+  
+
+
+<% include ../partials/footer %>

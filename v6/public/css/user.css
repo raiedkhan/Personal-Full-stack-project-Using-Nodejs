@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+/*CSS for all starts*/
+
+div.hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 0;
+  border-top: 2px solid #eee;
+  text-align: center;
+  height: 0px;
+  line-height: 0px;
+  font-size:40px;
+  font-weight:bold;
+  letter-spacing: 2px;
+}
+
+.hr-title {
+  font-family: 'Kanit', sans-serif;
+  background-color: #fff;
+}
+
+.user-profile
+{  
+  margin-top:100px;
+  background:#ECF0F1;
+}
+.user-data
+{
+  margin-top:30px;
+}
+.user-profile .user-data #user-data-img
+{
+  
+  margin-left:10px;
+  margin-bottom: 30px;
+  font-size:5vw;
+  border-radius: 50%;
+  padding: 60px;
+  font-family: 'Bree Serif', serif;
+  transition: all 0.8s ease;
+  color:#fff;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  letter-spacing:1vw;  
+  text-decoration: none;
+  outline: none;
+}
+.user-data #username
+{
+  margin-top:50px;
+  color:grey;
+  font-family: 'Kanit', sans-serif;
+  font-size:30px;
+  font-weight:bold;
+}
+.user-data #full-name
+{
+  color:grey;
+  font-family: 'Kanit', sans-serif;
+  font-size:25px;
+  font-weight:bolder;
+}
+.user-data #full-name span
+{
+  color:#000;
+}
+.user-data #about
+{
+  font-family: 'Kanit', sans-serif;
+  font-size:20px;
+  font-weight:bolder;
+  color:grey;
+}
+.user-data #about span
+{
+  color:#000;
+}
+.user-data #lat-quote
+{
+  font-family: 'Kanit', sans-serif;
+  font-size:20px;
+  font-weight:bolder;
+  color:grey;
+}
+.user-data #lat-quote span{
+  color:black;
+}
+
+.user-profile-quote .card-columns
+{
+  
+  
+  position: absolute;
+}
+.user-profile-quote .card
+{
+	font-size: 1.5vw;
+}
+.user-profile-quote .card .content .content-overlay {
+	font-size: 1.5vw;
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  
+}
+
+.user-profile-quote .card .content img
+{
+  height:19.4vw;
+}
+.user-profile-quote .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-size: 1.5vw;
+  padding-top: 4vw;
+  font-family: 'Courgette', cursive;
+}
+.user-profile-quote .card .title  {
+	top:5px;
+	left:5px;
+	color: white;
+	position: absolute;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-family: 'Acme', sans-serif;
+}
+.user-profile-quote .card .title  a{
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.user-profile-quote .card .show_more
+{
+  bottom:0px;
+  right:5px;
+	font-family: 'Kanit', sans-serif;
+	position: absolute;
+  font-weight: bolder;
+  text-decoration: none;
+  color:grey;
+}
+
+/*CSS for all Ends*/
+
+
+
+/*Css for Desktop View Starts*/
+
+@media only screen and (min-width: 992px) {
+
+}
+
+/*Css for Desktop View Ends*/
+
+
+
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+  .hr-title 
+  {
+    font-size:25px;
+  }
+  .user-profile .user-data #user-data-img
+  {
+    padding:9vw;
+    font-size:40px;
+  }
+  .user-profile
+  {
+    margin-top:50px;
+    background:#ECF0F1;
+  }
+  .user-data #username
+  {
+    font-size:20px; 
+  }
+  .user-data #full-name
+  {
+    font-size:15px;
+  }
+  .user-data #about
+  {  
+    font-size:15px;
+  }
+  .user-profile-quote .card-columns .card .content .content-overlay
+  {
+    height:75vw;
+  }
+  .user-profile-quote .card-columns .card .content img
+  {
+    height:75vw;
+  }
+  .user-profile-quote .card-columns .card
+  {
+    height:75vw;
+  }
+  .user-profile-quote .card-columns
+  {
+    margin-right: 6vw;
+  }
+  .user-profile-quote .card-columns .card .content .content-overlay p
+  {
+    padding-top: 20vw;
+    font-size: 5vw;
+  }
+  .user-profile-quote .card-columns .card .title {
+    font-size: 5vw;
+  }
+
+
+}
+
+/*Css for Mobile View Portrait Ends*/
+
+
+
+
+/*Css for Mobile View Landscape Starts*/
+
+@media only screen and (min-width:480px) and (max-width: 992px) {
+  .user-profile-quote .card-columns .card .content img
+  {
+    height:19vw;
+  }
+  .user-profile-quote .card-columns .card .content .content-overlay
+  {
+    height:19vw;
+  }
+}
+
+/*Css for Mobile View Landscape Ends*/

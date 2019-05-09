@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>RandomQuote</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="/css/app.css">
+      
+      <link rel="icon" href="/Images/logo.png">
+      <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
+  </head>
+  <body>
+    <!--Navbar Starts-->
+    <nav class="navbar fixed-top navbar-dark bg-primary navbar-expand-lg ">
+        <a class="navbar-brand" href="/">Randomquotes <i class="fas fa-pen-fancy"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <% if(!currentUser){ %>  
+                Login/Signup <i class="fas fa-user"></i>
+              <% } else { %>
+                <i class="far fa-user-circle"></i> <%= currentUser.firstname+" "+currentUser.lastname %>
+              <% } %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <% if(!currentUser){ %>
+                  <a class="dropdown-item" href="/register">Signup <i class="fas fa-user-plus"></i></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/login">Login <i class="fas fa-sign-in-alt"></i></a>
+                <% } else { %>
+                  <a class="dropdown-item" href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a>
+                <% } %>
+              </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/quotes/new" id="add-quote1">Add-Quote <i class="fas fa-pen-fancy"></i><span class="sr-only">(current)</span></a>  
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light  my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="container" >
+        
+          <% if(error && error.length > 0){ %>
+              <div class="alert alert-danger" role="alert">
+                  <%= error %>
+              </div>
+          <% } %>
+          <% if(success && success.length > 0){ %>
+              <div class="alert alert-success" role="alert">
+                  <%= success %>
+              </div>
+          <% } %>
+      </div>
+      
+    <!--Navbar Ends-->

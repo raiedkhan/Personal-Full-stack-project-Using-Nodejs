@@ -1,0 +1,75 @@
+
+<head>    
+        <link rel="stylesheet" type="text/css" href="/css/form.css">
+</head>
+<% include ../partials/header %>
+<body>
+
+        <body class="bg-primary" >
+                <div class="container">
+                    <div class="row">
+                        <div class="LogoAndQuotes col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12" id="LogoAndQuotes">
+                            <div class="row">
+                                <div class="col-12">
+                                    <center>
+                                        <br><img src="/Images/rqLogo.png" width="200" height="200" class="img-fluid" id="logo">
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-none d-sm-block">
+                                    <center>
+                                        <div class="quotes">
+                                            <% var count=0; quotes.forEach(function(quote) {  %>
+                                                <% if(quote.body.length < 150 && count<3){%>
+                                                    <p><i>“<%=quote.body %>”</i></p><h5>~<%=quote.title %></h5> <br>
+                                                <% count++; } %>
+                                            <% }) %>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+                            <form class="mx-auto col-12" action="/quotes" method="post" id="mainform" enctype="multipart/form-data">
+                                <center>
+                                    <h5 class="typewrite" data-period="2000" id="add_quote" data-type='[ "Write A Quote"]'>
+                                        <span class="wrap"></span>
+                                    </h5>
+                                </center>
+                                        <div class="form-group ">
+                                            <label for="inputState" id="title">Title</label>
+                                                <select id="inputTitle" name="quote[title]" class="form-control">
+                                                    <option value="Love">Love</option>
+                                                    <option value="Motivation">Motivation</option>
+                                                    <option value="Sad">Sad</option>
+                                                    <option selected  value="RandomQuote">RandomQuote</option>
+                                                </select>
+                                        </div>
+                                    <div class="form-group">
+                                        <label id="title" for="exampleFormControlTextarea1">Your Quote:</label>
+                                        <textarea class="form-control" name="quote[body]" id="exampleFormControlTextarea1" placeholder="Quote" rows="3" required="" onkeyup="count_up(this)" maxlength="150"></textarea>
+                                        <span class=" pull-right" id="count1">0</span>/150
+                                    </div>
+                                    <div class="form-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="image" name="image" accept="image/*" required>
+                                        <label class="custom-file-label" for="customImage">Choose an Image</label>
+                                    </div>
+                                </div>
+                                    <div class="input-box">
+                                        <button type="submit" class="btn btn-block  btn-outline-light ">Submit</button>
+                                    </div>
+                                </form>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script src="/js/nav.js"></script>                
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+</html>

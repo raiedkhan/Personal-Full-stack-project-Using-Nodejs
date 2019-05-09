@@ -1,0 +1,93 @@
+
+
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="/css/show.css">
+</head>
+<% include ../partials/header %>
+
+
+<!-- Show Quote Starts -->
+
+    <div class="container quote">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8">
+                    <div class="card" >
+                            <div class="content">
+                                <div class="content-overlay">
+                                    <p>"<%=quote.body.substring(0,110)%>"</p>
+                                </div>
+                                <img src="<%=quote.image %>" class="content-image card-img-top img-responsive" alt="...">
+                            </div>
+                            <span class="title "><a  href="#"><%=quote.title%></a></span>
+                            <div class="writer">
+                                    <a href="/users/<%=quote.author.id %>" class=" writer-image btn-primary btn-floating"><%=quote.author.firstname.substring(0,1).toUpperCase()+quote.author.lastname.substring(0,1).toUpperCase() %></a>
+                                    <span class="writer-name "><a href="/users/<%=quote.author.id %>"><%=quote.author.firstname.charAt(0).toUpperCase()+quote.author.firstname.slice(1)+" "+quote.author.lastname%></a></span>
+                                </div>
+                        </div>
+                </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        
+    </div>
+
+
+<!-- Show Quote Ends -->
+
+<!-- Show comment starts -->
+
+<div class="container comments">
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-10">
+            <% quote.comments.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-md-12 comment_data">
+                        <a class="comment_user" href="/users/<%=comment.author.id %>"><%=comment.author.firstname.charAt(0).toUpperCase()+comment.author.firstname.slice(1)+" "+comment.author.lastname%></a><span class="comment_text"> <%= comment.text %>  </span> 
+                    </div>
+                </div>
+            <% }) %>        
+            <hr>
+            <div class="comment">
+                    <form action="/quotes/<%= quote._id %>/comments" method="POST">
+                        <div class="form-group">
+                            <input class=" theinput" type="text" name="comment[text]" placeholder="Comment" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-success btn-block">Add Comment</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <div class="col-1">
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Show comment ends -->
+
+
+
+
+
+
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+</html>
