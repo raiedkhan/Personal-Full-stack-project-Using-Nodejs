@@ -1,0 +1,84 @@
+<% include ../partials/header %>
+
+
+<div class="container" style="margin-top: 10vw;">
+    <div class="row">
+	<div class="col-md-4">
+			<h1><%= user.firstname + " " + user.lastname %></h1>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quasi similique architecto ad modi sunt quaerat possimus, officiis quos. Voluptatibus repellendus exercitationem, id saepe sunt consectetur non quam sapiente assumenda.
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quasi similique architecto ad modi sunt quaerat possimus, officiis quos. Voluptatibus repellendus exercitationem, id saepe sunt consectetur non quam sapiente assumenda.
+	</div>
+	<div class="col-md-8">
+		<h3><%= user.username %>'s quote:</h3>
+		<ul>
+            <div class="row header cards">
+                <% quotes.slice(-3).forEach(function(quote) { %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="mot"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/mot4.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                                <span class="writer ">~ Submitted by <i class="fas fa-pen-fancy"></i> <a href="#"><%=quote.author.firstname+quote.author.lastname%> </a></span>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="sad"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/sad3.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                                <span class="writer ">~ <i class="fas fa-pen-fancy"></i> <a href="#"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,3).toLowerCase()==="lov"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"<a href="/quotes/<%=quote._id %>">Show more</a></p>
+                                        </div>
+                                        <img src="/Images/love1.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                                <span class="writer ">~ <i class="fas fa-pen-fancy"></i> <a href="/users/<%=quote.author.id %>"><%=quote.author.firstname+quote.author.lastname%></a></span>
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if(quote.title.substring(0,4).toLowerCase()==="rand"){ %>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="card" >
+                                    <div class="content">
+                                        <div class="content-overlay">
+                                            <p>"<%=quote.body.substring(0,110)%>"</p>
+                                        </div>
+                                        <img src="/Images/rand.jpg" class="content-image card-img-top img-responsive" alt="...">
+                                    </div>
+                                <span class="writer ">~ <i class="fas fa-pen-fancy"></i> <a href="#">Raied Khan</a></span>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }) %>
+        </div>
+		</ul>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>

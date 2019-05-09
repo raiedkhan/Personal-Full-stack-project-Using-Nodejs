@@ -1,0 +1,70 @@
+/*CSS for all starts*/
+
+.user-profile
+{
+    margin-top:150px;
+    background:#ECF0F1;
+}
+
+.user-image
+{
+    margin-top:50px;
+    padding: 0px;
+}
+
+.user-about
+{
+    padding: 0px;
+}
+  
+  div.hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 0;
+    border-top: 2px solid #eee;
+    text-align: center;
+    height: 0px;
+    line-height: 0px;
+    font-size:40px;
+    font-weight:bold;
+    letter-spacing: 5px;
+  }
+  
+  .hr-title {
+    font-family: 'Kanit', sans-serif;
+    background-color: #fff;
+  }
+  
+
+/*CSS for all Ends*/
+
+
+
+/*Css for Desktop View Starts*/
+
+@media only screen and (min-width: 992px) {
+
+}
+
+/*Css for Desktop View Ends*/
+
+
+
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+  
+}
+
+/*Css for Mobile View Portrait Ends*/
+
+
+
+
+/*Css for Mobile View Landscape Starts*/
+
+@media only screen and (min-width:480px) and (max-width: 992px) {
+ 
+}
+
+/*Css for Mobile View Landscape Ends*/

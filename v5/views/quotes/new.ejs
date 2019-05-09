@@ -1,0 +1,83 @@
+
+<% include ../partials/header %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="/css/form.css">
+
+</head>
+<body>
+
+        <body class="bg-primary" >
+                <div class="container">
+                    <div class="row">
+                        <div class="LogoAndQuotes col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12" id="LogoAndQuotes">
+                            <div class="row">
+                                <div class="col-12">
+                                    <center>
+                                        <br><img src="/Images/rqLogo.png" width="200" height="200" class="img-fluid" id="logo">
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-none d-sm-block">
+                                    <center>
+                                        <div class="quotes">
+                                            <% var count=0; quotes.forEach(function(quote) {  %>
+                                                <% if(quote.body.length < 50 && count<3){%>
+                                                    <p><i>“<%=quote.body %>”</i></p><h5>~<%=quote.title %></h5> <br>
+                                                <% count++; } %>
+                                            <% }) %>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+                            <form class="mx-auto col-12" action="/quotes" method="post" onsubmit="return check();" id="mainform">
+                                <center>
+                                    <h2 id="add_quote">Add a Quote</h2>
+                                </center>
+                                    <div class="form-group">
+                                        <label id="title">Title</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="title" id="exampleRadios1" value="Love" required>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Love
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="title" id="exampleRadios2" value="Motivational" required>
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Motivational
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="title" id="exampleRadios2" value="Sad" required>
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Sad
+                                            </label>
+                                        </div>                                  
+                                        <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="title" id="exampleRadios2" value="Random Quote"required>
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                    Random quote
+                                                </label>
+                                        </div>                  
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="title" for="exampleFormControlTextarea1">Your Quote:</label>
+                                        <textarea class="form-control" name="body" id="exampleFormControlTextarea1" placeholder="Quote" rows="3" required=""></textarea>
+                                    </div>
+                                    <div class="input-box">
+                                        <button type="submit" class="btn ">Submit</button>
+                                    </div>
+                                </form>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script src="/js/main.js"></script>
+<% include ../partials/footer %>

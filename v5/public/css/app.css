@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+
+/*Scroll Bar css starts */
+
+html::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-top: 0px;
+  background-color: #007bff;
+}
+
+html::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: white;
+}
+
+/*Scroll Bar css ends */
+
+/* Navbar Starts */
+
+.navbar
+{  
+  background: #3B8BEB ;
+}
+.navbar .navbar-brand
+{
+  font-family: 'Courgette', cursive;
+  font-weight:bolder;
+  font-size:30px;
+}
+.navbar .nav-link
+{
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+  font-size:20px;
+  
+}
+.navbar-nav li
+{
+  margin-left:3vw;
+}
+
+/* Navbar Ends */
+
+/* Header Starts */
+
+.header{
+  height: 100%;
+  width:100%;
+  background-image: url('');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header .heading
+{
+  position: absolute;
+}
+
+.header .heading .q_day p
+{
+  -webkit-text-stroke-width: 0.2vw;
+	-webkit-text-fill-color: #007bff;
+	-webkit-text-stroke-color: white;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 1px;
+  margin-left:15vw;
+  font-size:5vw;
+  color:white;
+  font-weight:10;
+  text-shadow:0px 0px 10px white;
+}
+
+.header .card
+{
+  margin-top:20vw;
+  margin-right: 15px;
+  position: absolute;
+	font-size: 1.5vw;
+	color:black;
+	border: none;
+}
+
+.header .card .content .content-overlay {
+	font-size: 1.5vw;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.header .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-size: 1.5vw;
+  padding-top: 4vw;
+  font-family: 'Courgette', cursive;
+}
+
+.header .card .title  {
+	top:5px;
+	left:5px;
+	color: white;
+	position: absolute;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-family: 'Acme', sans-serif;
+}
+.header .card .title  a{
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.header .card .writer  {
+	bottom:0px;
+	right:5px;
+	color: white;
+	position: absolute;
+  font-weight: bold;
+  
+}
+.header .card .writer  a{
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+/* Header Ends */
+
+/* Add content button */
+
+#add-quote2
+{
+  z-index:1000;
+  bottom:20px;
+  left:20px;
+  position: fixed;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+	outline: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+#add-quote2:hover{
+  font-size:20px;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+
+/* Add content button Ends */
+
+/* Go to top starts */
+
+
+
+#return-to-top {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+
+/* Go to top ends */
+
+
+
+
+/*Main body Starts*/
+
+.main{
+  height: 100vw;
+}
+
+.main .card-columns
+{
+  margin-top:5vw;
+  margin-right: 15px;
+  position: absolute;
+	font-size: 1.5vw;
+	color:black;
+	border: none;
+}
+
+
+.main .card-columns .card .content .content-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.main .card-columns .card .content .content-overlay p{
+	opacity: 1;
+	z-index: 1;
+	font-size: 1.5vw;
+  padding-top: 4vw;
+  font-family: 'Courgette', cursive;
+}
+
+.main .card-columns .card .title  {
+  font-family: 'Acme', sans-serif;
+	top:5px;
+	left:5px;
+	color: white;
+	position: absolute;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.main .card-columns .card .title  a{
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.main .card-columns .card .writer  {
+	bottom:12px;
+	left:5px;
+	font-family: 'Kanit', sans-serif;
+	position: absolute;
+  font-weight: bolder;
+}
+.main .card-columns .card .writer .writer-image
+{
+  font-family: 'Bree Serif', serif;
+  transition: all 0.8s ease;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+	letter-spacing: 1.5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+.main .card-columns .card .writer .writer-image:hover
+{
+  background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+.main .card-columns
+{
+  margin-left:3vw;
+  margin-right: 3vw;
+}
+.main .card-columns .card
+{
+  border-color:#D0D3D4;
+  transition: 0.2s;
+  margin-bottom: 5vw;
+  
+}
+.main .card-columns .card .writer .writer-name a
+{
+  text-decoration: none;
+  color:black;
+}
+
+.main .card-columns .card:hover
+{
+	box-shadow:8px 10px 10px #B3B6B7;
+}
+
+
+
+
+/*Main body Ends*/
+
+
+
+/*Css for Desktop View Starts*/
+
+@media only screen and (min-width: 992px) {
+
+  #add-quote1
+  {
+    display: block;
+  }
+  #add-quote2
+  {
+    display: none;
+  }
+  .main .card-columns .card
+  {
+    height: 24vw;
+  }
+  .navbar .form-inline input
+  {
+    width:15vw;
+  }
+  .header .heading
+  {
+    margin-top:100px;
+  }
+  .header .card
+  {
+    display: block;
+  }
+}
+
+/*Css for Desktop View Ends*/
+
+/*Css for Mobile View Portrait Starts*/
+
+@media only screen and (max-width: 425px) {
+  .navbar-nav li
+  {
+    margin-left:0vw;
+  }
+  #add-quote1
+  {
+    display: none;
+  }
+  #add-quote2
+  {
+    display: block;
+  }
+  .header .cards
+  {
+    display:none;
+  }
+  .header
+  {
+    height:120px;
+  }
+  .header .heading
+  {
+    margin-top:75px;
+  }
+
+  .main .card-columns .card
+  {
+    height:75vw;
+  }
+  .main .card-columns
+  {
+    margin-right: 6vw;
+  }
+  .main .card-columns .card .content .content-overlay p
+  {
+    padding-top: 10vw;
+    font-size: 5vw;
+  }
+  .main .card-columns .card .title {
+    font-size: 5vw;
+  }
+  .main .card-columns .card .writer {
+    font-size: 5vw;
+  }
+
+}
+
+/*Css for Mobile View Portrait Ends*/
+
+
+/*Css for Mobile View Landscape Starts*/
+
+@media only screen and (min-width:480px) and (max-width: 992px) {
+  #add-quote1
+  {
+    display: none;
+  }
+  #add-quote2
+  {
+    
+    display: block;
+  }
+  .header .heading
+  {
+    margin-top:175px;
+  }
+  .main .card-columns .card
+  {
+    height:25vw;
+  }
+  .navbar-nav li
+  {
+    margin-left:0vw;
+  }
+
+  .header .cards
+  {
+    display:none;
+  }
+
+}
+
+
+/*Css for Mobile View Landscape Ends*/
