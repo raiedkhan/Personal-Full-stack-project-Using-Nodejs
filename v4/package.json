@@ -9,9 +9,9 @@
   "author": "Raied Khan",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.2",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.16.1",
     "mongoose": "^5.4.17",
     "passport": "^0.4.0",
